@@ -14,9 +14,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.entity.Contact;
 import com.example.demo.service.ContactService;
-
-@RestController
 @CrossOrigin
+@RestController
+
 public class ContactRestController {
 
 	@Autowired
