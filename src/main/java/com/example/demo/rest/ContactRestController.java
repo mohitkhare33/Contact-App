@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.entity.Contact;
 import com.example.demo.service.ContactService;
-@CrossOrigin
+@CrossOrigin("*")
 @RestController
 
 public class ContactRestController {
@@ -51,8 +51,8 @@ public class ContactRestController {
 		
 	}
 	
-	@DeleteMapping
-	public String deleteContact(Integer contactID)
+	@DeleteMapping("/contact/{cid}")
+	public String deleteContact(@PathVariable("cid")Integer contactID)
 	{
 		boolean status =contactService.deleteContactById(contactID);
 		if(status)
